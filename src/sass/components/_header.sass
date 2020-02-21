@@ -1,0 +1,49 @@
+.header
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	color: white
+	padding-top: 12px
+	z-index: 60
+	text-align: center
+
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@include media-breakpoint-up('md')
+			align-items: flex-start
+		@include media-breakpoint-up('xl')
+			max-width: 1812px
+
+	&__region-phones
+		flex-direction: row
+		flex-wrap: nowrap
+		display: none
+		@include media-breakpoint-up('md')
+			display: flex
+			flex-grow: 1
+			justify-content: space-around
+		@include media-breakpoint-up('xl')
+			justify-content: space-between
+			flex-basis: 678px
+			flex-grow: 0
+
+	&__phone-primary-link
+		display: none
+		@include media-breakpoint-up('md')
+			display: block
+
+	@include media-breakpoint-up('md')
+		text-align: left
+	@include media-breakpoint-up('lg')
+		padding-top: 30px
+
+.site-logo
+	width: 100px
+	display: block
+	@include media-breakpoint-up('lg')
+	    width: 106px
+	@include media-breakpoint-up('xl')
+	    width: 168px

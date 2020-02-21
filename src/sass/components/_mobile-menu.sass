@@ -1,0 +1,42 @@
+.mobile-menu
+	display: none
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow-y: auto
+	z-index: 40
+	background-color: rgba(black, 0.9)
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	flex-grow: 1
+
+	&.visible
+		display: flex
+
+	&__phone-primary-link, &__phone-region-link
+		text-align: center
+		margin: 10px 0
+
+	&__phone-region-link
+		margin-bottom: 16px
+
+	&__phone-primary-link, &__phone-region-link
+		text-align: center
+
+	.phone-primary-link__title
+		font-size: 20px
+
+	.phone-region-link__title
+		font-size: 18px
+
+	.phone-primary-link__number
+		font-size: 22px
+
+	.phone-region-link__number
+		font-size: 20px
+
+	@include media-breakpoint-up('md')
+		display: none !important

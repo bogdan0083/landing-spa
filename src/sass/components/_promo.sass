@@ -1,0 +1,205 @@
+.promo
+	background-color: gray
+	color: white
+	@include media-breakpoint-up('md')
+		display: flex
+
+	&__left, &__right
+		position: relative
+		@include media-breakpoint-up('md')
+			width: 50%
+
+		.container
+			max-width: 100%
+
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background: linear-gradient(0deg, rgba(32, 51, 87, 0.0001) 53.05%, #111111 100%)
+			z-index: 1
+
+		&:after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background: rgba(#152737, 0.75)
+
+	&__background
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+
+	&__left
+		padding-bottom: 60px
+		padding-top: 80px
+		@include media-breakpoint-up('md')
+			padding-bottom: 100px
+			padding-top: 100px
+		@include media-breakpoint-up('lg')
+			padding-top: 140px
+
+	&__right
+		padding-top: 60px
+		padding-bottom: 40px
+		@include media-breakpoint-up('md')
+			padding-top: 100px
+			padding-bottom: 100px
+		@include media-breakpoint-up('lg')
+			padding-top: 140px
+
+		.promo__company-feature-title
+			margin-top: 5px
+			@include media-breakpoint-up('lg')
+				margin-top: 3px
+
+
+		.promo__company-feature-desc
+			line-height: 1.5
+			margin-top: 6px
+
+
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 590px
+		text-align: center
+		margin: auto
+		position: relative
+		z-index: 30
+		@include media-breakpoint-up('xl')
+			text-align: left
+			align-items: flex-start
+
+	&__top
+		margin-bottom: 40px
+		min-height: 92px
+		@include media-breakpoint-up('lg')
+			display: flex
+			align-items: center
+
+	&__logo
+		text-align: center
+		display: block
+		min-height: 80px
+		@include media-breakpoint-up('lg')
+			max-width: 180px
+			min-height: 0
+		@include media-breakpoint-up('xl')
+			max-width: 100%
+
+	&__countries-list
+		display: flex
+		justify-content: center
+		@include media-breakpoint-up('lg')
+			justify-content: flex-start
+
+		li
+			margin-right: 6px
+
+			&:last-child
+				margin-right: 0
+
+	&__company-desc
+		border-top: 1px solid rgba(white, 0.5)
+		padding-top: 16px
+		margin-top: 10px
+		@include media-breakpoint-up('lg')
+			border-top: none
+			padding-top: 0
+			margin-top: 0
+			margin-left: 20px
+			text-align: left
+			padding-left: 20px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 1px
+				height: 94%
+				background-color: rgba(white, 0.5)
+		@include media-breakpoint-up('xl')
+			padding-left: 40px
+			margin-left: 36px
+
+		&-text
+			margin-top: 6px
+			@include media-breakpoint-up('md')
+				margin-top: 10px
+			@include media-breakpoint-up('lg')
+				font-size: 15px
+			@include media-breakpoint-up('xl')
+				font-size: 17px
+
+	&__company-full-desc
+		font-size: 15px
+		margin-bottom: 20px
+		max-width: 300px
+		@include media-breakpoint-up('md')
+			font-size: 17px
+			max-width: 356px
+			min-height: 70px
+		@include media-breakpoint-up('lg')
+			font-size: 22px
+			max-width: 100%
+
+	&__company-features
+		text-align: left
+		max-width: 300px
+		@include media-breakpoint-up('lg')
+			max-width: 400px
+		@include media-breakpoint-up('xl')
+			max-width: 100%
+
+	&__company-feature
+		margin: 16px 0
+		display: flex
+		align-items: flex-start
+
+	&__company-feature-icon
+		flex: 0 0 25px
+		font-size: 22px
+		text-align: center
+		margin-right: 10px
+
+		svg
+			fill: white
+
+		.icon-check
+			font-size: 14px
+			margin-top: -8px
+			display: inline-block
+
+		@include media-breakpoint-up('lg')
+			flex-basis: 30px
+
+	&__company-feature-content
+		margin-top: 0
+
+	&__company-feature-title
+		font-size: 15px
+		margin-top: 0
+		margin-bottom: 10px
+		@include media-breakpoint-up('lg')
+			font-size: 19px
+
+	&__bottom
+		margin-top: 30px
+		display: flex
+		text-align: center
+		justify-content: center
+		align-self: stretch
