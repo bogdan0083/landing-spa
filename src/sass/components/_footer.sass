@@ -1,0 +1,25 @@
+.footer
+	padding: 30px 0
+	color: white
+	background-color: #1C1E1E
+	text-align: center
+	@include media-breakpoint-up('md')
+		padding: 10px
+		height: 150px
+
+	.container
+		height: 100%
+		@include media-breakpoint-up('md')
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+	&__policy-link
+		transition: all 0.3s
+		color: #606060
+		margin-bottom: 20px
+		display: inline-block
+		&:hover
+			color: white
+		@include media-breakpoint-up('md')
+			margin-bottom: 0

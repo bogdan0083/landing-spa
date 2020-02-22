@@ -7,7 +7,9 @@
       <div class="promo__content">
         <div class="promo__top">
           <a href="#" class="promo__logo">
-            <img src="img/arctic-spas-logo.svg" alt="Arctic Spas">
+            <img srcset="img/arctic-logo.png, img/arctic-logo@2x.png 2x"
+                 src="img/arctic-logo.png"
+                 alt="Arctic Spas">
           </a>
           <div class="promo__company-desc">
             <ul class="promo__countries-list">
@@ -36,7 +38,7 @@
           </li>
           <!-- END promo__company-feature -->
           <!-- BEGIN promo__company-feature -->
-          <li class="promo__company-feature">
+          <li class="promo__company-feature promo__company-feature-2">
             <div class="promo__company-feature-icon">
               {{ mixins.icon('o2') }}
             </div>
@@ -72,7 +74,7 @@
         <div class="promo__bottom">
           <a href="#" class="button">
             <div class="button__wrapper">
-              <span class="text">Подробнее</span>
+              <span class="button__text">Подробнее</span>
             </div>
           </a>
         </div>
@@ -89,7 +91,9 @@
       <div class="promo__content">
         <div class="promo__top">
           <a href="#" class="promo__logo">
-            <img src="img/nordbass-logo.svg" alt="Nordbass - Гидромассажные бассейны">
+            <img srcset="img/nordbass-logo.png, img/nordbass-logo@2x.png 2x"
+                 src="img/nordbass-logo.png"
+                 alt="Nordbass - Гидромассажные бассейны">
           </a>
           <div class="promo__company-desc">
             <ul class="promo__countries-list">
@@ -126,7 +130,7 @@
             <div class="promo__company-feature-content">
               <h4 class="promo__company-feature-title">Гидромассажные басейны от крупнейших производителей:</h4>
               <p class="promo__company-feature-desc">Viking Spa (США), Dream Spa (США), Arctic Spa (Канада), Delfi Spa
-                (Германия) Allseas Spa (Голландия)</p>
+                (Германия) <span>Allseas Spa (Голландия)</span></p>
             </div>
           </li>
           <!-- END promo__company-feature -->
@@ -152,7 +156,7 @@
           <!-- END promo__company-feature -->
         </ul>
         <div class="promo__bottom">
-          <a href="#" class="button-plus">
+          <a href="#" class="button-plus promo__button-plus">
             <div class="button-plus__wrapper">
               <div class="button-plus__circle">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -161,19 +165,19 @@
                         fill="white"/>
                 </svg>
               </div>
-              <span class="text">Подробнее</span>
+              <span class="button-plus__text">Подробнее</span>
             </div>
           </a>
-          <a href="#" class="button" style="display: none;">
-            <div class="button__wrapper">
-              <span class="text">Подробнее</span>
-            </div>
-          </a>
+          <div class="promo__hidden-button-wrapper">
+            <a href="#" class="button">
+              <div class="button__wrapper">
+                <span class="button__text">Подробнее</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
-
   </div>
   <!-- END promo-right -->
 </section>

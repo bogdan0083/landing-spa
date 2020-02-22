@@ -1,9 +1,3 @@
-// @TODO: Add svg4everybody!
-// @TODO: remove lucida grande font
-// @TODO: fix margin distance in header phones
-
-//+font-face('Lucida Grande', 'lucida-grande', '../fonts/lucida-grande-regular')
-
 html
 	+smooth-font
 
@@ -12,15 +6,20 @@ body
 	font-size: 14px
 	background-color: #FDFEFF
 	color: #1C1E1E
-	min-width: 330px
-	// +css-lock(16, 50, 600, 1000)
+	min-width: 320px
 	line-height: 1.4
+
+	&.locked
+		overflow: hidden
 
 a
 	color: inherit
 
 	&:hover
 		text-decoration: none
+
+.out
+	overflow: hidden
 
 .container
 	+make-container
@@ -57,6 +56,7 @@ img
 .phone-region-link
 	&__title
 		font-size: 13px
+
 	+media-breakpoint-up('sm')
 		font-size: 11px
 	@include media-breakpoint-up('lg')
@@ -64,16 +64,16 @@ img
 
 	&__number
 		font-size: 14px
-		margin-top: 7px
+		margin-top: 3px
 		+media-breakpoint-up('sm')
 			font-size: 11px
-			margin-top: 9px
+			margin-top: 5px
 		+media-breakpoint-up('lg')
 			font-size: 15px
-			margin-top: 8px
+			margin-top: 6px
 		+media-breakpoint-up('xl')
 			font-size: 18px
-			margin-top: 11px
+			margin-top: 8px
 
 .phone-primary-link
 	+media-breakpoint-up('md')
@@ -86,11 +86,13 @@ img
 		font-size: 16px
 		+media-breakpoint-up('md')
 			font-size: 17px
+			margin-top: 2px
 		+media-breakpoint-up('lg')
 			font-size: 18px
+			margin-top: 4px
 		+media-breakpoint-up('xl')
 			font-size: 26px
-			margin-top: 8px
+			margin-top: 4px
 
 .button
 	display: flex
@@ -100,6 +102,7 @@ img
 	color: white
 	font-size: 20px
 	text-decoration: none
+
 	&:before
 		content: ''
 		position: absolute
@@ -117,9 +120,68 @@ img
 		width: 100%
 		position: relative
 		z-index: 1
-		transition: all 0.3s
+		transition: all 0.2s
 		display: flex
 		justify-content: center
 		align-items: center
+
 		&:hover
 			transform: translateY(3px)
+
+.button-plus
+	color: white
+	font-size: 20px
+	font-weight: bold
+	height: 54px
+	text-decoration: none
+	display: flex
+	transition: all 0.3s
+
+	&:hover
+		opacity: 0.7
+		transform: translateY(-2px)
+
+	&__wrapper
+		display: flex
+		height: 100%
+		width: 100%
+		justify-content: center
+		align-items: center
+
+	&__circle
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 54px
+		flex: 0 0 54px
+		border-radius: 50%
+		background: linear-gradient(270deg, #00F2FE 0%, #4FACFE 100%)
+
+	svg
+		display: block
+
+	&__text
+		margin-left: 20px
+
+
+.section-title
+	position: relative
+	padding-bottom: 16px
+	margin-bottom: 30px
+
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 90px
+		height: 3px
+		background: linear-gradient(270deg, #00F2FE 0%, #4FACFE 100%)
+
+	@include media-breakpoint-up('md')
+		font-size: 26px
+	@include media-breakpoint-up('lg')
+		font-size: 30px
+		padding-bottom: 30px
+	@include media-breakpoint-up('xl')
+		font-size: 40px

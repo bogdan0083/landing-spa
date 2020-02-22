@@ -9,6 +9,7 @@ export default function initMobileTrigger() {
     e.preventDefault();
     const $t = $(this);
     $t.toggleClass('active');
+    $('body').toggleClass('locked');
     $mobileMenu.toggleClass('visible');
   });
 
