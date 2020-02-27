@@ -3,15 +3,13 @@
     cursor: pointer;
     transition: all 0.4s;
     margin-top: -1px;
+    z-index: 100;
 
     .burger {
         @include burger(30px, 2px, 6px, white);
     }
 
     &.active {
-        z-index: 100;
-        //transform: translateY(-5px);
-
         .burger {
             @include burger-to-cross();
         }

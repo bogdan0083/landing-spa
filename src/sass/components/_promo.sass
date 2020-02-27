@@ -51,6 +51,22 @@
 			padding-top: 100px
 		@include media-breakpoint-up('lg')
 			padding-top: 140px
+			&.active
+				&:after
+					opacity: 1
+
+				.promo__button-plus
+					opacity: 0
+
+				.promo__company-features
+					opacity: 1
+					transform: none
+
+		.promo__company-features
+			@include media-breakpoint-up('lg')
+				opacity: 0
+				transition: all 0.3s
+				transform: translateY(-10px)
 
 	&__right
 		padding-top: 60px
@@ -66,7 +82,7 @@
 			padding-bottom: 100px
 		@include media-breakpoint-up('lg')
 			padding-top: 140px
-			&:hover
+			&.active
 				&:after
 					opacity: 1
 
@@ -192,6 +208,19 @@
 		@include media-breakpoint-up('lg')
 			font-size: 22px
 			max-width: 100%
+			min-height: 90px
+		@include media-breakpoint-up('xl')
+			min-height: 60px
+
+	&__button-plus
+		display: none
+		position: absolute
+		left: 50%
+		top: 0
+		z-index: 1
+		transform: translateX(-50%)
+		@include media-breakpoint-up('lg')
+			display: block
 
 	&__company-features
 		text-align: left
@@ -203,6 +232,8 @@
 		@include media-breakpoint-up('xl')
 			max-width: 100%
 			width: 100%
+	&__company-features-wrap
+		position: relative
 
 	&__company-feature
 		margin: 16px 0
